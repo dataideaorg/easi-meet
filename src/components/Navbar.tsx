@@ -209,7 +209,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-[#007367]/95 backdrop-blur-sm">
+        <div className="md:hidden bg-[#dd8604]/95 backdrop-blur-sm">
           <div className="px-4 pt-2 pb-3 space-y-1">
             <NavLink href="/" label="Home" />
 
@@ -232,7 +232,7 @@ const Navbar: React.FC = () => {
               </div>
             ))}
 
-            {/* <div className="pt-2 border-t border-[#66fdee]/20">
+            <div className="pt-2 border-t border-[#66fdee]/20">
               {username ? (
                 <>
                   <div className="px-3 py-2 text-white/80">
@@ -261,7 +261,7 @@ const Navbar: React.FC = () => {
                   </Link>
                 </>
               )}
-            </div> */}
+            </div>
           </div>
         </div>
       )}
