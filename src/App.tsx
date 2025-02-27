@@ -5,7 +5,7 @@ import MeetingPage from "./pages/MeetingPage";
 function App() {
   return (
     <Router>
-      <Routes>
+      <Routes >
         <Route path="/" element={<HomePage />} />
         <Route path="/meeting" element={<MeetingPage />} />
       </Routes>
