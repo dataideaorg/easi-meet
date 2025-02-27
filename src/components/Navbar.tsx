@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-// import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../context/AuthContext";
 
 interface NavLinkProps {
   href: string;
@@ -29,7 +29,7 @@ const NavLink: React.FC<NavLinkProps> = ({ href, label, external }) => {
 };
 
 const Navbar: React.FC = () => {
-  //   const { username, logout } = useAuth();
+    const { username, logout } = useAuth();
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
@@ -95,17 +95,17 @@ const Navbar: React.FC = () => {
         <div className="flex h-20 items-center justify-between">
           {/* Logo Section */}
           <Link
-            to="https://www.dataidea.org/"
+            to="https://easi.ac.ug/"
             className="group flex items-center space-x-2"
           >
             <span className="font-heading text-white text-3xl font-bold transition-all duration-300 group-hover:text-[#66fdee]">
-              DATAIDEA
+              EASI
             </span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-4">
-            <NavLink href="https://www.dataidea.org/" label="Home" />
+            <NavLink href="/" label="Home" />
 
             {/* Desktop Dropdowns */}
             {[/*"resources",*/ "community"].map((menuType) => (
@@ -128,7 +128,7 @@ const Navbar: React.FC = () => {
             ))}
 
             {/* User Account Section */}
-            {/* <div className="relative">
+            <div className="relative">
               <button
                 onClick={() =>
                   setActiveMenu(activeMenu === "account" ? null : "account")
@@ -165,7 +165,7 @@ const Navbar: React.FC = () => {
                   )}
                 </div>
               )}
-            </div> */}
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
