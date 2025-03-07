@@ -93,7 +93,6 @@ const Register: React.FC = () => {
           {loading ? <BeatLoader loading={loading} /> : "Register"}
         </button>
       </form>
-      {error && <p className="text-red-500 underline p-3">{error}</p>}
       <p className="text-center mt-3">
         Already have an account?{" "}
         <Link to="/login" className="text-[#DD8604] underline">

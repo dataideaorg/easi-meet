@@ -66,7 +66,7 @@ const MeetingPage = () => {
       showScreenSharingButton: true,
       showTextChat: true,
       showUserList: true,
-      maxUsers: 100,
+      maxUsers: 1000,
       layout: "Auto",
       showLayoutButton: false,
     });

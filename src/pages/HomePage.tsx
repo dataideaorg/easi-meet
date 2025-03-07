@@ -17,7 +17,7 @@ const HomePage: React.FC = () => {
     const meetingID = formData.get("meetingID") as string;
     const userName = username || `userName${Math.floor(Math.random() * 10000)}`;
     if (meetingID && userName) {
-      navigate(`/meeting?roomID=${meetingID}&userName=${userName}`);
+      window.location.href = `/meeting?roomID=${meetingID}&userName=${userName}`;
     }else{
       toast.error("Please enter a valid meeting ID");
     }

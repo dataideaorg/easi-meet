@@ -19,6 +19,7 @@ interface RegisterData {
   
   // Register User
   export const register = async (data: RegisterData): Promise<void> => {
+    
     const response = await fetch("https://dataidea.pythonanywhere.com/accounts/register/", {
       method: "POST",
       headers: {
@@ -29,7 +30,15 @@ interface RegisterData {
   
     if (!response.ok) {
       const errorData = await response.json();
-      throw new Error(errorData.detail || "Error registering user");
+      if (errorData.username){
+        throw new Error("Username already exists");
+      }else if (errorData.email){
+        throw new Error("Email already exists");
+      }else if (errorData.password){
+        throw new Error("Select a stonger password");
+      }else{
+        throw new Error("Error registering user");
+      }
     }
   };
   
