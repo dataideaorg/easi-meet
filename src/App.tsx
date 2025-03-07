@@ -12,7 +12,7 @@ import Register from "./pages/Register";
 // import Navbar from "./components/Navbar";
 import MainLayout from "./layouts/MainLayout";
 import NotFound from "./pages/404";
-import ProtectedRoute from "./components/ProtectedRoute";
+// import ProtectedRoute from "./components/ProtectedRoute";
 
 
 const router = createBrowserRouter(
@@ -20,9 +20,10 @@ const router = createBrowserRouter(
     <Route path="/" element={<MainLayout />}>
       <Route index element={<HomePage />} />
       {/* Protected Meeting Route */}
-      <Route element={<ProtectedRoute />}>
+      {/* <Route element={<ProtectedRoute />}>
         <Route path="meeting" element={<MeetingPage />} />
-      </Route>
+      </Route> */}
+      <Route path="meeting" element={<MeetingPage />} />
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
       <Route path="*" element={<NotFound />} />
