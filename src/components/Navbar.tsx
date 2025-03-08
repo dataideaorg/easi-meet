@@ -108,7 +108,7 @@ const Navbar: React.FC = () => {
             <NavLink href="/" label="Home" />
 
             {/* Desktop Dropdowns */}
-            {[/*"resources", "community" */].map((menuType) => (
+            {/* {["resources", "community"].map((menuType) => (
               <div key={menuType} className="relative">
                 <button
                   onClick={() =>
@@ -125,7 +125,7 @@ const Navbar: React.FC = () => {
                   />
                 )}
               </div>
-            ))}
+            ))} */}
 
             {/* User Account Section */}
             <div className="relative">
@@ -213,7 +213,7 @@ const Navbar: React.FC = () => {
           <div className="px-4 pt-2 pb-3 space-y-1">
             <NavLink href="/" label="Home" />
 
-            {Object.entries(menuItems).map(([category, items]) => (
+            {/* {Object.entries(menuItems).map(([category, items]) => (
               <div key={category} className="py-2">
                 <div className="text-white font-semibold mb-2 capitalize">
                   {category}
@@ -230,7 +230,7 @@ const Navbar: React.FC = () => {
                   </a>
                 ))}
               </div>
-            ))}
+            ))} */}
 
             <div className="pt-2 border-t border-[#66fdee]/20">
               {username ? (

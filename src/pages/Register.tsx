@@ -10,7 +10,6 @@ const Register: React.FC = () => {
   const [username, setUsername] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const [error, setError] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -26,7 +25,6 @@ const Register: React.FC = () => {
     } catch (err: any) {
       setLoading(false)
       toast.error(err.message);
-      setError(err.message);
     }
   };
 
