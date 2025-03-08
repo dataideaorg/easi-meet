@@ -105,7 +105,7 @@ const Navbar: React.FC = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-4">
-            <NavLink href="/" label="Home" />
+            <NavLink href="/" external label="Home" />
 
             {/* Desktop Dropdowns */}
             {/* {["resources", "community"].map((menuType) => (
