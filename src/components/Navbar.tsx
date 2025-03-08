@@ -35,21 +35,21 @@ const Navbar: React.FC = () => {
   const navRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
-  const menuItems = {
-    resources: [
-      { label: "Data Science", href: "https://science.dataidea.org" },
-      { label: "Blog", href: "https://blog.dataidea.org" },
-      { label: "Movies", href: "https://movies.dataidea.org" },
-    ],
-    community: [
-      {
-        label: "Forum Group",
-        href: "https://chat.whatsapp.com/GuCZRyJICgO3Y7MPvDQKhi",
-      },
-      { label: "YouTube", href: "https://www.youtube.com/@dataideascience" },
-      { label: "Twitter", href: "https://twitter.com/dataideaorg" },
-    ],
-  };
+  // const menuItems = {
+  //   resources: [
+  //     { label: "Data Science", href: "https://science.dataidea.org" },
+  //     { label: "Blog", href: "https://blog.dataidea.org" },
+  //     { label: "Movies", href: "https://movies.dataidea.org" },
+  //   ],
+  //   community: [
+  //     {
+  //       label: "Forum Group",
+  //       href: "https://chat.whatsapp.com/GuCZRyJICgO3Y7MPvDQKhi",
+  //     },
+  //     { label: "YouTube", href: "https://www.youtube.com/@dataideascience" },
+  //     { label: "Twitter", href: "https://twitter.com/dataideaorg" },
+  //   ],
+  // };
 
   useEffect(() => {
     setActiveMenu(null);
@@ -68,23 +68,23 @@ const Navbar: React.FC = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const DropdownMenu: React.FC<{ items: typeof menuItems.resources }> = ({
-    items,
-  }) => (
-    <div className="absolute right-0 mt-2 w-48 bg-white/95 backdrop-blur-sm rounded-lg shadow-lg border border-[#66fdee]/20 overflow-hidden z-10">
-      {items.map((item, index) => (
-        <a
-          key={index}
-          href={item.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block px-4 py-2 text-gray-700 hover:bg-[#DD8604]/10 transition-colors duration-200"
-        >
-          {item.label}
-        </a>
-      ))}
-    </div>
-  );
+  // const DropdownMenu: React.FC<{ items: typeof menuItems.resources }> = ({
+  //   items,
+  // }) => (
+  //   <div className="absolute right-0 mt-2 w-48 bg-white/95 backdrop-blur-sm rounded-lg shadow-lg border border-[#66fdee]/20 overflow-hidden z-10">
+  //     {items.map((item, index) => (
+  //       <a
+  //         key={index}
+  //         href={item.href}
+  //         target="_blank"
+  //         rel="noopener noreferrer"
+  //         className="block px-4 py-2 text-gray-700 hover:bg-[#DD8604]/10 transition-colors duration-200"
+  //       >
+  //         {item.label}
+  //       </a>
+  //     ))}
+  //   </div>
+  // );
 
   return (
     <nav
