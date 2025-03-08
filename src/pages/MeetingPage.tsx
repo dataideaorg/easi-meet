@@ -58,8 +58,8 @@ const MeetingPage = () => {
       scenario: {
         mode: ZegoUIKitPrebuilt.VideoConference,
       },
-      turnOnMicrophoneWhenJoining: false,
-      turnOnCameraWhenJoining: false,
+      turnOnMicrophoneWhenJoining: true,
+      turnOnCameraWhenJoining: true,
       showMyCameraToggleButton: true,
       showMyMicrophoneToggleButton: true,
       showAudioVideoSettingsButton: true,
