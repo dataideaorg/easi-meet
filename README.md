@@ -1,50 +1,72 @@
-# React + TypeScript + Vite
+# EASI Meet - Video Conference Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+EASI Meet is a React-based video conferencing application that uses ZegoCloud for real-time communication.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Create and join video meetings
+- User authentication (login/register)
+- Real-time video and audio communication
+- Screen sharing
+- Text chat during meetings
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React 19
+- TypeScript
+- React Router DOM v7
+- ZegoCloud for video conferencing
+- Vite for bundling and development
+- GitHub Actions for automated deployment
 
-- Configure the top-level `parserOptions` property like this:
+## Development Setup
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/easi-meet.git
+   cd easi-meet
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:3000`
+
+## Deployment
+
+### Automatic Deployment with GitHub Actions
+
+This project is configured to automatically deploy to GitHub Pages when changes are pushed to the main branch. The deployment workflow is defined in `.github/workflows/deploy.yml`.
+
+### Manual Deployment
+
+If you prefer to deploy manually, you can use the following commands:
+
+```bash
+# Build the project
+npm run build
+
+# Deploy to GitHub Pages
+npm run deploy
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Configuration
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- The application uses HashRouter for routing, which works well with GitHub Pages.
+- The homepage is configured in `package.json` with the URL where the application will be hosted.
+- The base path for assets is dynamically determined from the package.json homepage field.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## License
+
+[Your License Here]
+
+## Contact
+
+[Your Contact Information]

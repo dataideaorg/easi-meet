@@ -1,3 +1,5 @@
+import { AUTH_URL } from "./endpoints";
+
 interface RegisterData {
     first_name: string
     last_name: string
@@ -20,7 +22,7 @@ interface RegisterData {
   // Register User
   export const register = async (data: RegisterData): Promise<void> => {
     
-    const response = await fetch("https://dataidea.pythonanywhere.com/accounts/register/", {
+    const response = await fetch(AUTH_URL + "/register/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -44,7 +46,7 @@ interface RegisterData {
   
   // Login User
   export const login = async (data: LoginData): Promise<AuthResponse> => {
-    const response = await fetch("https://dataidea.pythonanywhere.com/accounts/login/", {
+    const response = await fetch(AUTH_URL + "/login/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -3,7 +3,7 @@ import MeetingPage from "./pages/MeetingPage";
 import React from "react";
 import {
   Route,
-  createBrowserRouter,
+  createHashRouter,
   createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom";
@@ -15,7 +15,7 @@ import NotFound from "./pages/404";
 // import ProtectedRoute from "./components/ProtectedRoute";
 
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
       <Route index element={<HomePage />} />

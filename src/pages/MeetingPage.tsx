@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { ZegoUIKitPrebuilt } from "@zegocloud/zego-uikit-prebuilt";
+import { MEET_URL } from "../api/endpoints";
 
 const MeetingPage = () => {
   const meetingContainer = useRef<HTMLDivElement>(null);
@@ -13,7 +14,7 @@ const MeetingPage = () => {
       console.log("Fetching credentials");
       try {
         const response = await fetch(
-          "https://dataidea.pythonanywhere.com/meet/credentials"
+          `${MEET_URL}/credentials`
         );
         const data = await response.json();
         setCredentials(data);
